@@ -1,0 +1,7 @@
+The actual sponsor icons are used in the following way:
+
+- png images are converted to svg using https://convertio.co/
+- svg are passed into iconmoon to create a font 
+
+- iconmoon-style.css inside the css directory is referenced in the index.html
+- this stylesheet references the fonts directory placed in the root to access the sponsor logos (which are the svgs transformed into fonts using iconmoon).

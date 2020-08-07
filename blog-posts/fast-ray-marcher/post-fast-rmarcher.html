@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nihat Isik</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS FILE -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- GLOBAL CUSTOM CSS FILE -->
+    <link id="theme-style" rel="stylesheet" href="/css/partials/_variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CUSTOM BlOG STYLE  -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- HIGHLIGHT CODE CDN -->
+    <link id="code-theme-style" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css">
+
+</head>
+<body>
+    <!-- BACK IMAGE -->
+    <div class="bg-img-repeat"></div>
+    
+    <!-- ======================== -->
+    <!--    START HEADER AREA     -->
+    <!-- ======================== -->
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand text-uppercase" href="/index.html">N</a>
+                <div class='mr-auto'></div>
+                <button id="theme-switch-button" class=""> <i class="far fa-lightbulb"></i> </button>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- BLOG IMAGE TOP -->
+    <div class="blog-image-top">
+        <img src="/blog-posts/fast-ray-marcher/bg-asl.jpg" alt="pc half">
+    </div>
+
+
+    <!-- ======================== -->
+    <!--    START BLOG POST       -->
+    <!-- ======================== -->
+    <section id="blog-post" class="blog-post-section mt-5 pt-5">
+        <div class="container">
+
+            <!-- BLOG TITLE -->
+            <p class="blog-title blog-title-adjust-size"> Fast CPU Raymarcher using SIMD </p>
+            <p class="blog-sub-title"> eth course where the goal is to increase performance of an algorithm taking into account cache and simd </p>
+
+            <hr>
+
+            <!-- TAG & TITLE -->
+            <div class="row blog-tag-date align-items-center justify-content-between">
+                <div class="col-6 col-sm-4 col-md-2 text-center"> 
+                    <a href="/projects.html"><i class="fas fa-bars projects-button"></i> </a>
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-user"></i> Nihat Isik </div> 
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-hourglass-half"></i> 5min </div> 
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-calendar-day"></i> 06.08.20 </div>
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-tag"></i> OTHER </div>
+            </div>
+
+            <hr>
+
+            <div class="mb-5"></div>
+
+            <!-- BLOG CHAPTER -->
+            <p class="blog-chapter"> ETH Course </p>
+            <p class="blog-para">
+                Advanced Systems Lab is an ETH course focused on understanding how to make code fast. Taking into consideration the compiler, the cache and code vectorization.
+            </p>
+
+            <!-- BLOG CHAPTER -->
+            <p class="blog-chapter"> Ray Marcher based on sphere tracing </p>
+            <p class="blog-para">
+                We decided to build a Ray Marcher from scratch using only the c programming language and without needing to install any other library. <br>
+                We also built a scene parser that allows for scenes to be defined with a simple .json file.
+                <br>
+                <br>
+                A ray marcher is optimal for rendering complex mathematical shapes. Or shapes that need to be approximated with polygons otherwise. 
+                A simple example is rendering a sphere. In the traditional way (ray tracing) we would shoot rays and collide with triangles.
+                However the ray-marcher shoots rays and moves with a fixed (or dynamic in our case) step size until the <span class="bbold"> signed distance function (SDF) </span> becomes 0 or less.
+                This SDF is the combination (the min function) of the signed distance function of all the shapes in the scene.
+                <br>
+                <br>
+                A very good resource for this is the following <a target="_blank"  href="https://www.iquilezles.org/www/articles/distfunctions/distfunctions.htm">blog</a>. It is very good for ray marcher or graphics related topics overall.
+            
+                <br>
+                For more information over the algorithm and the optimizations you can read the report HERE.
+            </p>
+
+            <p class="blog-chapter"> Raymarcher Video Explanation </p>
+            <div class="row blog-image justify-content-center align-items-start my-3">
+                <video width="640" height="480" controls>
+                    <source src="/blog-posts/fast-ray-marcher/RayMarchNormal.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p> Raymarcher video explanation I programmed in Unity. </p>
+            </div>
+
+            <div class="row blog-image justify-content-center align-items-start my-3">
+                <video width="640" height="480" controls>
+                    <source src="/blog-posts/fast-ray-marcher/RayMarch_Multi_Stop.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p> Vectorization example. Shooting 4 rays in one loop iteration. Notice the states of the rays changing when hitting an object. </p>
+            </div>
+
+
+            <p class="blog-chapter"> Mandelbulb Example </p>
+            <div class="row blog-image justify-content-center align-items-start my-3">
+                <div class="col-12 col-md-6 mx-5 my-3">
+                    <img src="/blog-posts/fast-ray-marcher/mandelbulb.png">
+                    <p> Mandelbulb rendered using our raymarcher. </p>
+                </div>
+            </div>
+
+            <!-- BLOG QUOTE -->
+            <p class="blog-chapter"> Report and Code </p>
+            <div class="blog-para">
+                The report can be found here:
+                <br>
+                <br>
+                <p> <a target="_blank" href=""> <i class="fas fa-file-alt icon-list"></i>Report </a> </p>
+                <p> <a target="_blank" href=""> <i class="fab fa-github icon-list"></i>Github Repo </a> </p>
+            </div>
+        
+        
+
+            <div class="row see-all-projects justify-content-center pt-5">
+                <a href="/projects.html">
+                    <div class="col-3 text-center">
+                        go to projects
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ======================== -->
+    <!--          JS LINKS        -->
+    <!-- ======================== -->
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ee0a746e75.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY FILE -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- POPPER CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!-- BOOTSTRAP JS FILE -->
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- THEME SELECTION MODE ADDENDUM FOR CODE STYLING-->
+    <script src="/js/themeSelection.js"></script>
+
+    <!-- HIGHLIGHT CODE SCRIPT -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

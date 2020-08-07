@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nihat Isik</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS FILE -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- GLOBAL CUSTOM CSS FILE -->
+    <link id="theme-style" rel="stylesheet" href="/css/partials/_variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CUSTOM BlOG STYLE  -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- HIGHLIGHT CODE CDN -->
+    <link id="code-theme-style" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css">
+
+</head>
+<body>
+    <!-- BACK IMAGE -->
+    <div class="bg-img-repeat"></div>
+    
+    <!-- ======================== -->
+    <!--    START HEADER AREA     -->
+    <!-- ======================== -->
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand text-uppercase" href="/index.html">N</a>
+                <div class='mr-auto'></div>
+                <button id="theme-switch-button" class=""> <i class="far fa-lightbulb"></i> </button>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- BLOG IMAGE TOP -->
+    <div class="blog-image-top bg">
+        <img src="/blog-posts/pbs-flowmo/bg-pbs.jpg" alt="pc and desk and plant">
+    </div>
+
+
+    <!-- ======================== -->
+    <!--    START BLOG POST       -->
+    <!-- ======================== -->
+    <section id="blog-post" class="blog-post-section mt-5 pt-5">
+        <div class="container">
+
+            <!-- BLOG TITLE -->
+            <p class="blog-title blog-title-adjust-size"> Rigidbody and Softbody Physics Engine </p>
+            <p class="blog-sub-title"> Physics engine built in Unity. </p>
+
+            <hr>
+
+            <!-- TAG & TITLE -->
+            <div class="row blog-tag-date align-items-center justify-content-between">
+                <div class="col-6 col-sm-4 col-md-2 text-center"> 
+                    <a href="/projects.html"><i class="fas fa-bars projects-button"></i> </a>
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-user"></i> Nihat Isik </div> 
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-hourglass-half"></i> 4min </div> 
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-calendar-day"></i> 05.08.20 </div>
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-tag"></i> Vision </div>
+            </div>
+
+            <hr>
+
+            <div class="mb-5"></div>
+
+            <!-- BLOG CHAPTER -->
+            <p class="blog-chapter"> Task </p>
+            <p class="blog-para">
+                Build something based on the ETH Course <span class="iitalic">Physically based simulation</span>.
+                <br>
+                The options were pretty much the following:
+
+                <div class="blog-todo my-4">
+                    <p> <span id="tbox"> <span id="x">0</span> </span> Rigidbody simulation </p>
+                    <p> <span id="tbox"> <span id="x">1</span> </span> Softbody simulation </p>
+                    <p> <span id="tbox"> <span id="x">2</span> </span> Fluid simulation </p>
+                </div>
+    
+                We opted for 0 and 1.
+            </p>
+
+            <!-- BLOG CHAPTER -->
+            <p class="blog-chapter"> Setting </p>
+            <p class="blog-para">
+                We used the Unity Game Engine without, obviously, using the built-in physics engine.
+            </p>
+                
+            <div class="blog-sub-chapter"> Integration </div>
+            <p class="blog-para">
+                We used the Verlet Integration scheme. 
+                This choice was motivated by the follwing <a target="_blank" href="https://www.cs.cmu.edu/afs/cs/academic/class/15462-s13/www/lec_slides/Jakobsen.pdf">paper</a>, 
+                since we wanted to tackle specifically soft bodies.
+            </p>
+                
+            <div class="blog-sub-chapter"> Rigidbody </div>
+            <p class="blog-para">
+                Every rigidbody is composed by a tetrahedron (following the above mentioned paper).
+                The simulation of the movement is then handled by the integration scheme. Since the tetrahedron is composed by 4 particles and 6 constraints, 
+                this allows to capture also orientation. However the rotations are not very realistic (but when using this scheme realism shouldn't be the goal).
+            </p>
+
+
+            <div class="blog-sub-chapter"> Softbody </div>
+            <p class="blog-para">
+                With the pipeline we built softbody simulation became very easy. 
+                As an example simulating a soft cube would just require setting the corners of the cube as particles and attach spring constraints between each 
+                particle. After defining stiffness and damping the simulation would do the rest. See the github repo below for clarity.
+            </p>
+
+            <div class="blog-sub-chapter"> Collision Resolution </div>
+            <span class="bbold">Broad phase:</span> we used the <a target="_blank" href="http://www.dyn4j.org/2010/01/sat/">SAT algorithm</a>. <br>
+            <span class="bbold">Narrow phase:</span> since we implemented only convex shapes, such as sphere and oriented bounding box (OBB) we managed to 
+            take the information given by the SAT to compute the collision points. The trickiest part was OBBvsOBB which we tried to implement using the 
+            <a target="_blank" href="http://www.r-5.org/files/books/computers/algo-list/realtime-3d/Ian_Millington-Game_Physics_Engine_Development-EN.pdf">books examples</a> 
+            (but achieved a semi working collision resolution for this case).
+            
+
+            <p class="blog-chapter"> Additional: Cloth Simulation and Skinned-Rigged Mesh Simulation </p>
+            <p class="blog-para">
+                <ul class="my-4">
+                    <li> We also implemented a cloth simulation with enabled collision. </li>
+                    <li> We also integrated a case of a skinned and rigged mesh soft body simulation to show how powerful this scheme can be.
+                        We created particles at the joint positions and used the bone lengths as the spring constraints and finally let the 
+                        simulation run to have a nice soft tree.   </li>
+                </ul>
+            </p>
+            
+            
+            <!-- BLOG IMAGES -->
+            <p class="blog-chapter"> Example </p>
+            <div class="row blog-image justify-content-center align-items-start my-3">
+                <div class="col-9 col-md-6 col-lg-4 mx-5 my-3">
+                    <img src="/blog-posts/pbs-flowmo/tree1.jpg">
+                    <p> Rigged tree. </p>
+                </div>
+                <div class="col-9 col-md-6 col-lg-4 mx-5 my-3">
+                    <img src="/blog-posts/pbs-flowmo/tree-constraints.png">
+                    <p> Constraints on the particles of the tree. </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 justify-content-center align-items-center d-flex">
+
+                    <video width="640" height="480" controls>
+                        <source src="/blog-posts/pbs-flowmo/ClothCollision5.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+        
+                </div>
+
+            </div>
+
+            <p class="blog-chapter"> Final Video </p>
+            <div class="row">
+                <div class="col-12 justify-content-center align-items-center d-flex">
+
+                    <video width="640" height="480" controls>
+                        <source src="/blog-posts/pbs-flowmo/pbs_trailer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+        
+                </div>
+            </div>
+            
+
+
+            <!-- BLOG QUOTE -->
+            <p class="blog-chapter"> Resources </p>
+            <div class="blog-para">
+                The report can be found here:
+                <br>
+                <br>
+                <p> <a target="_blank" href="https://github.com/devnio/Flowmo"> <i class="fab fa-github icon-list"></i>Github Repo </a> </p>
+            </div>
+            
+
+        
+
+            <div class="row see-all-projects justify-content-center pt-5">
+                <a href="/projects.html">
+                    <div class="col-3 text-center">
+                        go to projects
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ======================== -->
+    <!--          JS LINKS        -->
+    <!-- ======================== -->
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ee0a746e75.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY FILE -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- POPPER CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!-- BOOTSTRAP JS FILE -->
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- THEME SELECTION MODE ADDENDUM FOR CODE STYLING-->
+    <script src="/js/themeSelection.js"></script>
+
+    <!-- HIGHLIGHT CODE SCRIPT -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

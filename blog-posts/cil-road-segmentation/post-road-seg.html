@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nihat Isik</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS FILE -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- GLOBAL CUSTOM CSS FILE -->
+    <link id="theme-style" rel="stylesheet" href="/css/partials/_variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CUSTOM BlOG STYLE  -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- HIGHLIGHT CODE CDN -->
+    <link id="code-theme-style" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css">
+
+</head>
+<body>
+    <!-- BACK IMAGE -->
+    <div class="bg-img-repeat"></div>
+    
+    <!-- ======================== -->
+    <!--    START HEADER AREA     -->
+    <!-- ======================== -->
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand text-uppercase" href="/index.html">N</a>
+                <div class='mr-auto'></div>
+                <button id="theme-switch-button" class=""> <i class="far fa-lightbulb"></i> </button>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- BLOG IMAGE TOP -->
+    <div class="blog-image-top">
+        <img src="/blog-posts/cil-road-segmentation/bg-road.jpg" alt="road and city">
+    </div>
+
+
+    <!-- ======================== -->
+    <!--    START BLOG POST       -->
+    <!-- ======================== -->
+    <section id="blog-post" class="blog-post-section mt-5 pt-5">
+        <div class="container">
+
+            <!-- BLOG TITLE -->
+            <p class="blog-title blog-title-adjust-size"> Road Segmentation Project </p>
+            <p class="blog-sub-title"> computational intelligence lab eth course project  </p>
+
+            <hr>
+
+            <!-- TAG & TITLE -->
+            <div class="row blog-tag-date align-items-center justify-content-between">
+                <div class="col-6 col-sm-4 col-md-2 text-center"> 
+                    <a href="/projects.html"><i class="fas fa-bars projects-button"></i> </a>
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-user"></i> Nihat Isik </div> 
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-hourglass-half"></i> 2min </div> 
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-calendar-day"></i> 04.08.20 </div>
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-tag"></i> ML </div>
+            </div>
+
+            <hr>
+
+            <div class="mb-5"></div>
+
+            <!-- BLOG CHAPTER -->
+            <p class="blog-chapter"> Abstract </p>
+            <p class="blog-para">
+                The extraction of information from image and
+                video is a challenging task in computer vision and machine
+                learning. A concrete problem is locating and labeling objects in
+                an image, for example during the conversion of satellite images
+                to road maps. In theory, this allows map-services to enhance
+                and update their images automatically by detecting new roads
+                from updated satellite images as well as to notify of discrepancies between machine-generated and human-generated
+                predictions. Factors such as large variances in road designs,
+                lighting conditions, and occlusions make roads surprisingly
+                challenging to categorize correctly. This project explores the
+                use of various fully convolutional networks for labeling roads in
+                RGB satellite images and concludes with the use of a modified
+                U-Net to give reliable results for even a small data set of
+                training images.
+            </p>
+
+            <!-- BLOG CHAPTER -->
+            <p class="blog-chapter"> Setting </p>
+            <p class="blog-para">
+                Given satellite images together with the labelled road positions, our task is to train a model capable of pixelwise predicting roads on satellite images. 
+                The available time was around 2 months in a group of 4 people. 
+            </p>
+
+            <p class="blog-chapter"> Some Notes </p>
+            <p class="blog-quote">
+                Since we didn't have much data we 
+                relied heavily on perturbations. We used
+                various types of elastic deformations of the input. Examples
+                are rotations, image flipping, stretching in one or both axis
+                and shearing of the images.
+            </p>
+            
+
+            <!-- BLOG IMAGES -->
+            <div class="row blog-image justify-content-center align-items-start my-3">
+                <div class="col-12 col-md-6 mx-5 my-3">
+                    <img src="/blog-posts/cil-road-segmentation/augment-data.PNG">
+                    <p> Augmentation example. </p>
+                </div>
+            </div>
+
+            <p class="blog-quote">
+                Finally we were able to achieve a pretty good result in segmenting roads.
+            </p>
+            
+
+            <!-- BLOG IMAGES -->
+            <div class="row blog-image justify-content-center align-items-start my-3">
+                <div class="col-12 col-md-6 mx-5 my-3">
+                    <img src="/blog-posts/cil-road-segmentation/example-seg-eval.PNG">
+                    <p> Network ouput after being trained on only 100 images.
+                        On the left we have the output probabilities as overlay over the input images.
+                        On the right the predicted roads using a probability cutoff of 0.6.
+                         </p>
+                </div>
+            </div>
+
+
+
+            <!-- BLOG QUOTE -->
+            <p class="blog-chapter"> Report </p>
+            <div class="blog-para">
+                The report can be found here:
+                <br>
+                <br>
+                <p> <a target="_blank" href="/blog-posts/cil-road-segmentation/CIL_Road_Segmentation_Report_2019.pdf"> <i class="fas fa-file-alt icon-list"></i>Report of the project </a> </p>
+                <p> <a target="_blank" href="https://github.com/laurinpaech/segme-net"> <i class="fab fa-github icon-list"></i>Github Repo </a> </p>
+            </div>
+            
+
+        
+
+            <div class="row see-all-projects justify-content-center pt-5">
+                <a href="/projects.html">
+                    <div class="col-3 text-center">
+                        go to projects
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ======================== -->
+    <!--          JS LINKS        -->
+    <!-- ======================== -->
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ee0a746e75.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY FILE -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- POPPER CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!-- BOOTSTRAP JS FILE -->
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- THEME SELECTION MODE ADDENDUM FOR CODE STYLING-->
+    <script src="/js/themeSelection.js"></script>
+
+    <!-- HIGHLIGHT CODE SCRIPT -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

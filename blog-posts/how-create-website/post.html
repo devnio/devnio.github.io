@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nihat Isik</title>
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- BOOTSTRAP CSS FILE -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- GLOBAL CUSTOM CSS FILE -->
+    <link id="theme-style" rel="stylesheet" href="/css/partials/_variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CUSTOM BlOG STYLE  -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- HIGHLIGHT CODE CDN -->
+    <link id="code-theme-style" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css">
+
+</head>
+<body>
+    <!-- BACK IMAGE -->
+    <div class="bg-img-repeat"></div>
+    <!-- ======================== -->
+    <!--    START HEADER AREA     -->
+    <!-- ======================== -->
+    <header class="header_area">
+        <div class="main-menu">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand text-uppercase" href="/index.html">N</a>
+                <div class='mr-auto'></div>
+                <button id="theme-switch-button" class=""> <i class="far fa-lightbulb"></i> </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BLOG IMAGE TOP -->
+    <div class="blog-image-top b-img-obj-pos-top">
+        <img src="/blog-posts/how-create-website/1-create-website.jpg" alt="copmuter on desk">
+    </div>
+
+    <!-- ======================== -->
+    <!--    START BLOG POST       -->
+    <!-- ======================== -->
+    <section id="blog-post" class="blog-post-section mt-5 pt-5 mb-5 pt-5">
+        <div class="container">
+
+            <!-- BLOG TITLE -->
+            <p class="blog-title blog-title-adjust-size"> How I created this website  </p>
+            <p class="blog-sub-title "> Using HTML5, CSS3, Javascript and Bootstrap </p>
+
+            <hr>
+
+            <!-- TAG & TITLE -->
+            <div class="row blog-tag-date align-items-center justify-content-between">
+                <div class="col-6 col-sm-4 col-md-2 text-center"> 
+                    <a href="/projects.html"><i class="fas fa-bars projects-button"></i> </a>
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-user"></i> Nihat Isik </div> 
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-hourglass-half"></i> 7min </div> 
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-calendar-day"></i> 02.08.20 </div>
+                <div class="col-6 col-sm-4 col-md-2 text-center"> <i class="fas fa-tag"></i> Other </div>
+            </div>
+
+            <hr>
+
+            <div class="mb-5"></div>
+            
+            <!-- summary -->
+            <p class="blog-quote text-center"> Building a website in 1 week. </p>
+
+            <!-- premise -->
+            <p class="blog-chapter"> Premise </p>
+            <p class="blog-para">
+                Usually I would make a website the quick way, using a tool, such as wordpress or joomla combined with premade themes. 
+                However, for my portfolio website I decided to tackle a small challenge and <span class="iitalic"> build a website in 1 week </span> from scratch.
+                
+                In this short post I will explain my process for creating this website in 1 week.
+            </p>
+
+            <!-- resources -->
+            <p class="blog-chapter"> Resources </p>
+            <div class="blog-todo my-4">
+                <p> <span id="tbox"> <span id="x">1</span> </span> <a target="_blank" href="https://www.udemy.com/course/the-web-developer-bootcamp/"> Udemy - The Web Developer Bootcamp </a> </p>
+                <p> <span id="tbox"> <span id="x">2</span> </span> <a target="_blank" href="https://www.youtube.com/watch?v=dgKSqz3it50&t=111s"> Youtube - Portfolio Website </a> </p>
+                <p> <span id="tbox"> <span id="x">3</span> </span> <a target="_blank" href="https://www.w3schools.com/"> W3Schools </a> </p>
+                <p> <span id="tbox"> <span id="x">4</span> </span> <a target="_blank" href="https://www.google.com/"> Google </a> </p>
+            </div>
+            
+            <!-- learning the basics -->
+            <p class="blog-chapter"> Learning the basics </p>
+            <p class="blog-sub-chapter"> Understand html </p>
+            <p class="blog-para">
+                This is a pretty straightforward task. A single html file will define the <a href="https://www.w3schools.com/html/html_elements.asp">structure</a> and the content of a webpage.
+                As an example the text you're reading is written inside a <span class="bbold"> p </span> element inside the html file for this post.
+            </p>
+
+            <p class="blog-sub-chapter"> Understand CSS </p>
+            <p class="blog-para">
+                CSS (Cascading Style Sheets) is the language used to write the style of an html page. 
+                There are plenty of properties that can be used to define certain styles and layouts, and learning all of them by heart wouldn't make much sense.
+                Googling and using the previously mentioned resources would give a very good start on the most used properties.
+                <br>
+                In my opinion the most important stuff to understand are:
+                <div class="blog-todo my-4">
+                    <p> <span id="tcircle"></span> <a target="_blank" href="https://www.w3schools.com/css/css_boxmodel.asp"> Box Model</a>: All html elements are represented as boxes with a padding, margin, border and content. </p>
+                    <p> <span id="tcircle"></span> <a target="_blank" href="https://www.w3schools.com/css/css_specificity.asp"> Specificity</a>: All css definitions can be overwritten based on the specificity (to find out how specific a definition is you can use an <a target="_blank" href="https://specificity.keegan.st/">online calculator</a>). </p>
+                </div>
+            </p>
+
+            <p class="blog-sub-chapter"> Understand Javascript </p>
+            <p class="blog-para">
+                For a small scope website like this, javascript is a perfect fit for manipulating the website dynamically. This type of use case is known as <a target="_blank" href="https://www.w3schools.com/js/js_htmldom.asp">DOM Manipulation</a>.
+                <br>
+                You can modify the html by creating links to every element and apply any kind of change to the element or also remove it completely.
+            </p>
+
+            <p class="blog-sub-chapter"> Bootstrap </p>
+            <p class="blog-para">
+                Bootstrap is a library that uses all the previously mentioned technologies and simplifies the process of creating a website.
+                It provides a lot of classes to simplify layout and style of an html page. The best part is that it allows to create a <span class="bbold">responsive</span> website (good looking on every device) very easily.
+                <br>
+                <br>
+                <span class="bbold"> Don't start with bootstrap. </span> Make sure to have a good grasp of the other technologies first.
+                If you start directly with bootstrap you risk not being able to modify the predefined classes to fit your needs. 
+                <br>
+                <br>
+                As an example, this website uses bootsrap almost entirely for the responsive and layout features. All the styling is self defined using CSS. 
+                In this way it is hardly noticeable that this website is made using bootstrap.
+            </p>
+
+            <p class="blog-quote"> 
+                This part was the most time consuming part. 
+                I watched the frontend part of the udemy tutorial [1] and the youtube video [2] to understand these technologies.
+                In total I spent 4 days for this part.
+            </p>   
+
+            
+
+            <p class="blog-chapter"> Designing and implementing the website </p>
+            <p class="blog-para">
+                After having a good idea of how HTML, CSS, Javascript (and optionally Bootstrap) work, you have to define the style of your website.
+                To be entirely honest I didn't know how I wanted the website to look. I had a rough idea in mind and I started iterating over the design multiple times.
+                <br>
+                <br>
+
+                But I knew for sure that I wanted to have:
+                <div class="blog-todo my-4">
+                    <p> <span id="tbox"><span id="x">0</span></span> a <span class="bbold"> minimal and responsive </span> website </p>
+                    <p> <span id="tbox"><span id="x">1</span></span> a <span class="bbold"> dark mode </span> (for people like me who prefer dark mode on every editor) </p>
+                    <p> <span id="tbox"><span id="x">2</span></span> an <span class="bbold"> easy way to add blog posts </span> and have them dynamically show up </p>
+                    <p> <span id="tbox"><span id="x">3</span></span> an option to <span class="bbold"> filter the dynamically added posts </span> using predefined tags </p>
+                </div>
+
+                <div class="blog-sub-chapter">Achieve goal 0: minimal and responsive</div>
+                <p class="blog-para">
+                    I tried not having more than 3 base colors. Keeping most of the stuff minimal and without overdoing with fancy layouts.
+                    The color palette was found using <a target="_blank" href="https://colorhunt.co/"> color hunt</a>.
+                    
+                    <br>
+                    Responsiveness is mostly handled with bootstrap, but in some occasions I had to hard code the placements of certain elements <a target="_blank" href="https://www.w3schools.com/css/css3_mediaqueries_ex.asp"> using css media queries</a>:
+                    <pre><code class="css blog-code">
+/* On screens that are 1200px or less, set the background color to red */
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: red;
+  }
+}
+                    </code></pre>
+
+                </p>
+
+
+                <div class="blog-sub-chapter">Achieve goal 1: dark mode</div>
+                <p class="blog-para">
+                    It is a good practice to define a color palette using <a target="_blank" href="https://www.w3schools.com/css/css3_variables.asp"> css variables</a> in a separate css file. 
+                    This variables are then used inside the main css file. The html page loads then the variables and the main css styiling sheet. 
+                    
+                    <br>
+                    <br>
+                    To get dark mode woking I created <span class="iitalic"> two variables sheets </span> (one for light and one for dark mode).
+                    Using javascript it is then possible to define which variables sheet to load in the html page. 
+                    
+                    In javascript a variable defines which theme is currently selected (by default it is light). A switch button is also linked in the javascript. 
+                    When the user presses the button the theme is changed and it is stored inside the <a target="_blank" href="https://www.w3schools.com/html/html5_webstorage.asp">localstorage</a>.
+                    In this way the theme will be persistent across all the pages and saved in the browser.
+
+                    <br>
+                    Here is a snippet:
+                </p>   
+                    <pre><code class="js blog-code">
+let theme = localStorage.getItem('theme');
+if (theme == null) {
+    setTheme('light');
+} else
+{
+    setTheme(theme);
+}
+
+// ...
+
+function setTheme(mode) {
+    if (mode == 'dark')
+    {
+        // change stylesheet
+        document.getElementById('theme-style').href = '/css/partials/_variables_dark.css';
+    } 
+    //...
+}
+                    </code></pre>
+                <p class="blog-para">
+                    <br>
+                    Also notice that the images in the main page are <span class="bbold"> not .png or .jpg </span>.
+                    Since I knew that I wanted the images to be affected by the theme of the website I <span class="bbold">converted the 
+                    .png images into .svg </span> using <a target="_blank" href="https://convertio.co/it/png-svg/">convertio</a>.
+                    Afterwards I used <a target="_blank" href="https://icomoon.io/">iconmoon</a> to create a font. 
+                    This font is actually a collection of the images I used in the website and the nice thing is that all css font properties can be used 
+                    on these images. So changing the color is a matter of using the <span class="iitalic">color</span> property in css.
+                </p>
+
+                    <div class="blog-sub-chapter">Achieve goal 2: Dynamic blog posts</div>
+                    <div class="blog-para">
+                        I didn't want to add all the information for each blog post manually inside the html. 
+                        Instead I wanted to have an automatic way of showing the blog posts in the projects section. 
+                        <br> <br>
+                        This made it also easy to add logic for not showing more than 5 posts in the main page, but showing a <span class="iitalic"> show more </span>
+                        button which would redirect to a new page with all the projects.
+                        <br><br>
+                        Additionally this approach allows to sort the blog posts in any order using javascript.
+                        <br><br>
+                        Since the scope of this project is not very big I decided to take a simple approach and use a <span class="bbold">.json</span> file which would contain 
+                        all the information for every blog post:
+                        
+                        <div class="blog-table mb-5">
+                            <table>
+                                <tr>
+                                  <th>BlogPost Id</th>
+                                  <th>Date</th>
+                                  <th>Tag</th>
+                                  <th>Title</th>
+                                  <th>Description</th>
+                                  <th>Project Link</th>
+                                  <th>Image Link</th>
+                                </tr>
+                                <tr>
+                                  <td>0</td>
+                                  <td>10.02.2018</td>
+                                  <td>Vision</td>
+                                  <td>Ray Marcher</td>
+                                  <td>A fast ray marcher in c</td>
+                                  <td><span class="iitalic">/blog/post-ray-march.html</span></td>
+                                  <td><span class="iitalic">/img0.png</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>14.08.2019</td>
+                                    <td>Game</td>
+                                    <td>Mobile Game</td>
+                                    <td>Building a mobile game from scratch</td>
+                                    <td><span class="iitalic">/blog/post-mobile-game.html</span></td>
+                                    <td><span class="iitalic">/img1.png</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    
+                        A javascript file reads all the content using <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch</a>, creates a blogPost object for every entry in the file, saves them into an array
+                        and sorts the array from most recent to least recent. Finally based on the filtering option, not more than 5 cards are shown in the projects section.
+
+                    </div>
+
+                    <div class="blog-sub-chapter">Achieve goal 3: Filter blog posts</div>
+                    <div class="blog-para">
+                        Multiple tag buttons are linked to the script with an event for the <span class="iitalic">click</span> action. 
+                        This event is handled by filtering the array of blog posts based on the clicked tag and replace the current cards by the filtered content. 
+                        Filtering becomes as simple as this:
+
+                        <pre><code class="js blog-code mt-3">
+// blogPosts is the array containing all the blogPost objects
+filteredPosts = blogPosts.filter(elem => elem.tag == selectedTag);
+/* 
+   show is a function that replaces the content of the 
+   current cards with 5 elements of the filtered array 
+*/
+show(filteredPosts);
+                        </code></pre>
+                    </div>
+                    
+                </p>
+            </p>
+
+
+            <p class="blog-chapter"> Finalizing the website </p>
+            <div class="blog-para">
+                Finally I added some small scripts to have smooth scrolling in the main page when selecting a menu item. 
+                This caused some trouble for the <span class="bbold"> active </span> state because I had to activate the buttons not only when clicking but also when scrolling. 
+                
+                <br><br>
+                I managed to make this work but unfortunately when pressing a menu item there is a small flickering in the active states. 
+                Since I don't find this to be a big deal I decided to not spend time to solve it. 
+                Funny enough I realised that also some websites using elementor in wordpress have this issue.
+
+                <br><br>
+                This concludes the journey of creating this website in 1 week. I'm happy I decided to work on the website from scratch.
+                It was a very rewarding experience, and I finally can say that I have some idea about web desing.
+            </div>
+            <br>
+
+        <div class="row see-all-projects justify-content-center pt-5">
+            <a href="/projects.html">
+                <div class="col-3 text-center">
+                    go to projects
+                </div>
+            </a>
+        </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ======================== -->
+    <!--          JS LINKS        -->
+    <!-- ======================== -->
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ee0a746e75.js" crossorigin="anonymous"></script>
+
+    <!-- JQUERY FILE -->
+    <script src="/js/jquery.js"></script>
+
+    <!-- POPPER CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <!-- BOOTSTRAP JS FILE -->
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!-- THEME SELECTION MODE ADDENDUM FOR CODE STYLING-->
+    <script src="/js/themeSelection.js"></script>
+
+    <!-- HIGHLIGHT CODE SCRIPT -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

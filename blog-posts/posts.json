@@ -1,0 +1,73 @@
+{
+    "posts": [
+        {
+            "day": "3",
+            "month": "8",
+            "year": "2020",
+            "title": "ETH - Bachelor Thesis",
+            "description": "Study reinforcement learning agent and environment definition for good training results",
+            "tag": "machinelearning",
+            "imglink": "/blog-posts/bsc-thesis/2-bsc-thesis.jpg",
+            "blogpostlink": "/blog-posts/bsc-thesis/post.html"
+        },
+
+
+        {
+            "day": "4",
+            "month": "8",
+            "year": "2020",
+            "title": "Road Segmentation Project",
+            "description": "Computational intelligence lab eth course project.",
+            "tag": "machinelearning",
+            "imglink": "/blog-posts/cil-road-segmentation/bg-road.jpg",
+            "blogpostlink": "/blog-posts/cil-road-segmentation/post-road-seg.html"
+        },
+
+        {
+            "day": "6",
+            "month": "8",
+            "year": "2020",
+            "title": "Fast CPU Raymarcher using SIMD",
+            "description": "Eth course where the goal is to increase performance of an algorithm taking into account cache and simd.",
+            "tag": "other",
+            "imglink": "/blog-posts/fast-ray-marcher/bg-asl.jpg",
+            "blogpostlink": "/blog-posts/fast-ray-marcher/post-fast-rmarcher.html"
+        },
+
+        {
+            "day": "3",
+            "month": "8",
+            "year": "2020",
+            "title": "Gamelab",
+            "description": "Eth course where the goal is to create a game from scratch in 3 months.",
+            "tag": "games",
+            "imglink": "/blog-posts/gamelab-game/ps-joystick.jpg",
+            "blogpostlink": "/blog-posts/gamelab-game/post-gamelab.html"
+        },
+
+        {
+            "day": "5",
+            "month": "8",
+            "year": "2020",
+            "title": "Rigidbody and Softbody Physics Engine",
+            "description": "Physics engine built in Unity.",
+            "tag": "vision",
+            "imglink": "/blog-posts/pbs-flowmo/bg-pbs.jpg",
+            "blogpostlink": "/blog-posts/pbs-flowmo/post-pbs.html"
+        },
+
+        {
+            "day": "2",
+            "month": "8",
+            "year": "2020",
+            "title": "How I created this website",
+            "description": "Using HTML5, CSS3, Javascript and Bootstrap.",
+            "tag": "others",
+            "imglink": "/blog-posts/how-create-website/1-create-website.jpg",
+            "blogpostlink": "/blog-posts/how-create-website/post.html"
+        }
+
+
+
+    ]
+}
