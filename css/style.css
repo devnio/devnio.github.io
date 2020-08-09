@@ -1,7 +1,7 @@
 
 /* CSS VARIABLES */
 /* @import url(./partials/_variables.css); */
-@import url(./partials/_global.css);
+@import url(./partials/global.css);
 
 /* ------------- */
 /* start navigation */
@@ -552,7 +552,7 @@ video {
     background-color: var(--secondary-color);
     border-radius: 20px;
 
-    box-shadow: var(--primary-color) 0px 10px 10px;
+    box-shadow: var(--primary-color) 0px 10px 1px;
 }
 
 /* Card body hover */
@@ -630,7 +630,7 @@ video {
     background-color: var(--background-color);
     border: 1px solid var(--secondary-color);
     border-radius: 10px;
-    box-shadow: var(--primary-color) 0px 10px 10px;
+    box-shadow: var(--primary-color) 0px 10px 1px;
 
 }
 
@@ -664,7 +664,7 @@ video {
     height: 100px;
     border: 2px solid var(--primary-color);
     border-bottom: 15px solid var(--primary-color);
-    box-shadow: var(--primary-color) 0px 15px 25px;
+    /* box-shadow: var(--primary-color) 0px 15px px; */
 }
 
 .thanks-area .thanks-email-font {

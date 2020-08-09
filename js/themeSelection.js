@@ -28,7 +28,7 @@ lightButton.addEventListener('click', function(){
 function setTheme(mode) {
     if (mode == 'light')
     {
-        document.getElementById('theme-style').href = '/css/partials/_variables.css';
+        document.getElementById('theme-style').href = '/css/partials/variables.css';
         // set also code style if present
         var code_style = document.getElementById('code-theme-style');
         if (code_style != null)
@@ -39,7 +39,7 @@ function setTheme(mode) {
     }
     else if (mode = 'dark')
     {
-        document.getElementById('theme-style').href = '/css/partials/_variables_dark.css';
+        document.getElementById('theme-style').href = '/css/partials/variables_dark.css';
         // set also code style if present
         var code_style = document.getElementById('code-theme-style');
         if (code_style != null)

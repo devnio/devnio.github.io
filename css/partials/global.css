@@ -229,5 +229,5 @@ button:hover,
 }
 
 .add-box-shadow {
-    box-shadow: var(--primary-color) 0px 10px 10px;
+    box-shadow: var(--primary-color) 0px 5px 1px;
 }
