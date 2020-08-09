@@ -1,7 +1,7 @@
 
 /* CSS VARIABLES */
 /* @import url(./partials/_variables.css); */
-@import url(./partials/global.css);
+@import url(./partials/_global.css);
 
 /* ------------- */
 /* start navigation */
@@ -551,6 +551,8 @@ video {
 .site-main .project-area .card{
     background-color: var(--secondary-color);
     border-radius: 20px;
+
+    box-shadow: var(--primary-color) 0px 10px 10px;
 }
 
 /* Card body hover */
@@ -628,6 +630,8 @@ video {
     background-color: var(--background-color);
     border: 1px solid var(--secondary-color);
     border-radius: 10px;
+    box-shadow: var(--primary-color) 0px 10px 10px;
+
 }
 
 /* Show more text hover */
@@ -647,6 +651,61 @@ video {
 
 /* ------------- */
 /* End Project Area */
+/* ------------- */
+
+
+/* ------------- */
+/* Start ThanksSection Area */
+/* ------------- */
+.thanks-area .thanks-email-card {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    color: var(--background-color);
+    height: 100px;
+    border: 2px solid var(--primary-color);
+    border-bottom: 15px solid var(--primary-color);
+    box-shadow: var(--primary-color) 0px 15px 25px;
+}
+
+.thanks-area .thanks-email-font {
+    font: normal 600 30px/25px var(--roboto);
+    font-size: 30px;
+}
+
+.thanks-area .thanks-email-card i {
+    font-size: 50px;
+    padding: 0.5rem;
+    transform: skewX(-5deg);
+    transform: rotate(5deg);
+}
+
+@media screen and  (max-width: 768px) {
+    .thanks-area .thanks-email-font {
+        background-color: var(--secondary-color);
+        font: normal 600 24px/25px var(--roboto);
+        font-size: 24px;
+    }    
+}
+
+@media screen and  (max-width: 576px) {
+    .thanks-area .thanks-email-font {
+        background-color: var(--secondary-color);
+        font: normal 600 16px/25px var(--roboto);
+        font-size: 16px;
+    }    
+
+    .thanks-area .thanks-email-card i {
+        font-size: 30px;
+        padding: 0.5rem;
+        transform: skewX(-5deg);
+        transform: rotate(5deg);
+    }
+}
+
+
+
+/* ------------- */
+/* End ThanksSection Area */
 /* ------------- */
 
 /* ------------- */
