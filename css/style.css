@@ -406,7 +406,48 @@ video {
     word-wrap: break-word;
     height: 100px;
     transform: skewY(-1.5deg);
+
+    font: normal 600 16px/25px var(--roboto);
 }
+
+@media screen and  (max-width: 576px) {
+    .site-main .about-area .about-area-button-card {
+        background-color: var(--primary-color);
+        border-radius: 15px;
+        border: 2px solid var(--text-color);
+        border-left: 10px solid var(--text-color);
+        border-top: 4px solid var(--secondary-color);
+        text-align: center;
+        padding: 0 0.5rem;
+        word-wrap: break-word;
+        height: 100px;
+        transform: skewY(-1.5deg);
+    
+        font: normal 600 12px/25px var(--roboto);
+    }
+
+    .site-main .about-area .icon-gtc-logo {
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+
+    .site-main .about-area .icon-crl-Logo {
+        font-size: 0.8rem;
+        color: var(--text-color);
+    }
+
+    .site-main .about-area .icon-eth-logo {
+        font-size: 2rem;
+        color: var(--text-color);
+    }
+    
+    .site-main .about-area .icon-data-analytics-lab-logo {
+        font-size: 0.8rem;
+        color: var(--text-color);
+    }
+}
+
+
 
 .site-main .about-area .about-area-button-card:hover {
     background-color: var(--secondary-color);
