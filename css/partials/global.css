@@ -36,6 +36,14 @@
     }    
 }
 
+@media screen and  (max-width: 576px) {
+    .special-title-text-adjust-size
+    {
+        font-size: 5rem;
+    }    
+}
+
+
 /* ================== */
 /* HEADER SUB TEXT   */
 /* ================== */

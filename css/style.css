@@ -160,7 +160,7 @@ video {
 /* When smaller reduce font-size for img */
 @media screen and  (max-width: 576px) {
     .site-main .site-banner .icon-MeArt {
-        font-size: 300px;
+        font-size: 50vw;
         color: var(--background-color);
     }
 }
