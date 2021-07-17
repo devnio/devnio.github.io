@@ -1,7 +1,17 @@
 The actual sponsor icons are used in the following way:
 
 - png images are converted to svg using https://convertio.co/
-- svg are passed into iconmoon to create a font 
+- svg are passed into iconmoon.io to create a font 
 
 - iconmoon-style.css inside the css directory is referenced in the index.html
 - this stylesheet references the fonts directory placed in the root to access the sponsor logos (which are the svgs transformed into fonts using iconmoon).
+
+
+UPDATE - Steps:
+- convert any .png icon you want to add to our font (using convertio.co)
+- take all the svgs inside img/bu-svgs/sgvs (also the ones inside the directories)
+- place them inside iconmoon.io app (choose remove colors option)
+- download the generated .zip
+- unzip and take the fonts directory and replace our fonts directory with the generated one
+- take the 'style.css', rename it 'iconmoon-style.css' and move it inside our /css/ (replace old one)
+- CHECK the urls inside the 'iconmoon-style.css' file:   src:  url('fonts/icomoon.eot?33m7lk'); to   src:  url('/fonts/icomoon.eot?33m7lk');

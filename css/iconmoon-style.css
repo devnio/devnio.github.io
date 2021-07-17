@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/icomoon.eot?8696r');
-  src:  url('/fonts/icomoon.eot?8696r#iefix') format('embedded-opentype'),
-    url('/fonts/icomoon.ttf?8696r') format('truetype'),
-    url('/fonts/icomoon.woff?8696r') format('woff'),
-    url('/fonts/icomoon.svg?8696r#icomoon') format('svg');
+  src:  url('/fonts/icomoon.eot?33m7lk');
+  src:  url('/fonts/icomoon.eot?33m7lk#iefix') format('embedded-opentype'),
+    url('/fonts/icomoon.ttf?33m7lk') format('truetype'),
+    url('/fonts/icomoon.woff?33m7lk') format('woff'),
+    url('/fonts/icomoon.svg?33m7lk#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,27 +25,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-cgl-logo:before {
+.icon-MeArt:before {
   content: "\e903";
 }
-.icon-data-analytics-lab-logo:before {
+.icon-MePcArt:before {
   content: "\e904";
 }
-.icon-MePcArt:before {
-  content: "\e900";
-}
-.icon-MeArt:before {
+.icon-cgl-logo:before {
   content: "\e901";
 }
 .icon-crl-Logo:before {
   content: "\e902";
 }
-.icon-eth-logo:before {
+.icon-data-analytics-lab-logo:before {
   content: "\e915";
 }
-.icon-gtc-logo:before {
+.icon-eth-logo:before {
   content: "\e916";
 }
-.icon-mickeylogo:before {
+.icon-gtc-logo:before {
   content: "\e917";
+}
+.icon-mickeylogo:before {
+  content: "\e918";
+}
+.icon-urbang_games_logo_inv:before {
+  content: "\e900";
 }
