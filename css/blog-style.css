@@ -130,7 +130,7 @@ hr {
     border: 0;
     height: 1px;
     background-color: var(--background-color);
-    background-image: linear-gradient(to right, var(--blog-container-color), var(--primary-color), var(--blog-container-color));
+    background-image: linear-gradient(to right, var(--blog-container-color), var(--secondary-color), var(--blog-container-color));
 }
 
 /* =============== */
@@ -138,7 +138,7 @@ hr {
 /* =============== */
 .blog-post-section .blog-tag-date div {
     font: normal 800 15px/25px var(--roboto);
-    color: var(--primary-color);
+    color: var(--text-color);
     text-transform: uppercase;
     font-style: italic;
 }
@@ -146,10 +146,10 @@ hr {
 .blog-post-section .blog-tag-date .projects-button {
     background-clip: padding-box;
 
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--text-color);
     border-radius: 0.5rem;
 
-    color: var(--primary-color);
+    color: var(--text-color);
 
     width: 50px;
     height: 25px;
@@ -160,10 +160,10 @@ hr {
 }
 
 .blog-post-section .blog-tag-date .projects-button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--text-color);
     background-clip: padding-box;
 
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--text-color);
     border-radius: 0.5rem;
 
     color: var(--background-color);

@@ -12,9 +12,9 @@ html, body{
 :root{
     --background-color: #f0ece3;
     --primary-color: #dfd3c3;
-    --secondary-color: #c7b198;
+    --secondary-color: #353535;
     --title-color: #596e79;
-    --text-color: #8d6e4d;  
+    --text-color: #5e5e5e;  
     --border-color: #201f1f17;  
     /* --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%); */
     --gradient-color: linear-gradient(45deg, var(--background-color) 0%, var(--primary-color) 100%);
