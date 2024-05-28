@@ -460,13 +460,13 @@ video {
 }
 
 
-.site-main .about-area a {
+.site-main .about-area .some-projects a {
     font: normal bold 18px/22px var(--roboto);
     text-transform: uppercase;
     color: var(--text-color);
 }
 
-.site-main .about-area a:hover {
+.site-main .about-area .some-projects a:hover {
     font: normal bold 18px/22px var(--roboto);
     text-transform: uppercase;
     color: var(--background-color);
@@ -785,6 +785,18 @@ video {
 /* End Footer Area */
 /* ------------- */
 
+a {
+	font-style: italic;
+	font-weight: 500;
+	color: var(--text-color);
+}
+
+a:hover {
+	font-style: italic;
+	font-weight: 500;
+	text-decoration:underline;
+	color: var(--text-color);
+}
 
 /* SHOW WHEN SCROLLING */
 [data-scroll] {
