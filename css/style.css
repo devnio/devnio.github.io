@@ -86,7 +86,7 @@ video {
     /* padding: 0.8rem 1.7rem; */
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
-    /* padding-left: 0.8rem; */
+    padding-left: 0.8rem;
     margin: 0.1rem;
     color: var(--background-color);
 }
