@@ -549,7 +549,7 @@
         <!-- ======================== -->
         <footer class="page-footer d-flex align-items-md-center justify-content-center">
           <div class="footer-copyright">
-            © 2020 Copyright: Nihat Isik
+            © <span id="year"></span> Copyright: Nihat Isik
           </div>
         </footer>
 
@@ -592,6 +592,11 @@
           });
       });
     </script> -->
+
+	<!-- AUTOMATIC FOOTER YEAR -->
+	<script>
+		document.getElementById("year").innerHTML = new Date().getFullYear();
+	</script>
 
     <!-- EVENTS AND SMOOTH SCROLL -->
     <script src="js/menu_item_activation.js"></script>
