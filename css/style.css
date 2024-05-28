@@ -329,6 +329,12 @@ video {
     color: var(--text-color);
 }
 
+/* ESRI LOGO */
+.site-main .about-area .icon-esri_logo {
+    font-size: 3.7rem;
+    color: var(--text-color);
+}
+
 /* GTC LOGO */
 .site-main .about-area .icon-gtc-logo {
     font-size: 3rem;

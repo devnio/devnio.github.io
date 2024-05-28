@@ -1,0 +1,18 @@
+Open *demo.html* to see a list of all the glyphs in your font along with their codes/ligatures.
+
+To use the generated font in desktop programs, you can install the TTF font. In order to copy the character associated with each icon, refer to the text box at the bottom right corner of each glyph in demo.html. The character inside this text box may be invisible; but it can still be copied. See this guide for more info: https://icomoon.io/#docs/local-fonts
+
+You won't need any of the files located under the *demo-files* directory when including the generated font in your own projects.
+
+You can import *selection.json* back to the IcoMoon app using the *Import Icons* button (or via Main Menu → Manage Projects) to retrieve your icon selection.
+
+Last time I did the following:
+
+1. open iconmoon.io and open app (ignore pricing stuff)
+2. import font using last selection.json
+3. import additional svg files --> make sure there are no missing fonts used by website (otherwise add them from img/bu-svgs/svgs)
+4. in bottom menu go to "generate font"
+5. a .zip will be generated
+6. take the style.css file that has been generated and rename to iconmoon-style.css
+7. replace css/iconmoon-style.css (imported in index.html)
+8. replace the fonts folder in ./ with the generated fonts folder
