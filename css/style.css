@@ -6,10 +6,6 @@
 /* ------------- */
 /* start navigation */
 /* ------------- */
-/* logo */
-/* .header_area .main-menu .navbar img {
-    width: 80px;
-} */
 
 video {
     width: 90%;
@@ -56,6 +52,7 @@ video {
     font-family: var(--roboto);
     font-weight: 500;
     font-size: 3rem;
+	font-style: normal;
     background-clip: padding-box;
     color: var(--secondary-color);
     -webkit-text-stroke-width: 1.5px;
@@ -66,6 +63,7 @@ video {
     font-family: var(--roboto);
     font-weight: 500;
     font-size: 3rem;
+	font-style: normal;
     background-clip: padding-box;
     color: var(--background-color);
     -webkit-text-stroke-width: 1.5px;
