@@ -671,8 +671,8 @@
 				return;
 			}
 
-			var messageBody = "Name: " + document.getElementById("name").value;
-			messageBody += "<br>Message: <br>";
+			var messageBody = "<strong>Name:</strong> " + document.getElementById("name").value;
+			messageBody += "<br><strong>Message:</strong> <br>";
 			messageBody += document.getElementById("message").value.replace(/\n/g, "<br>");
 
 			Email.send({
