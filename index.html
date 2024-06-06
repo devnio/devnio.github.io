@@ -665,19 +665,22 @@
 		}
 
 		function sendEmail() {
+			setMessage("", alertColor);
 			if (!checkInputAllFilled()) {
 				setMessage("Please fill in all fields!", alertColor);
 				return;
 			}
+
+			var messageBody = "Name: " + document.getElementById("name").value;
+			messageBody += "<br>Message: <br>";
+			messageBody += document.getElementById("message").value.replace(/\n/g, "<br>");
 
 			Email.send({
 				SecureToken: "02e5b5c3-4b32-45e3-a163-7d2cda9bf155",
 				To : 'nihat.isik.ethz@gmail.com',
 				From : "nihat.isik.ethz@gmail.com",
 				Subject : "nihatisik.com - message from: " + document.getElementById("emailAddress").value,
-				Body :
-					"Name: " + document.getElementById("name").value + 
-					"<br>Message: <br>" + document.getElementById("message").value
+				Body : messageBody
 			}).then(
 				(message) => {
 					if (message == "OK") {
