@@ -545,30 +545,34 @@
 								<h2 class="text-uppercase basic-title-text basic-title-text-adjust-size text-center">Contact Me</h2></div>
 
 							<!-- Bootstrap 5 starter form -->
-							<form id="contactForm" onsubmit="sendEmail(); reset(); return false;">
+							<form id="contactForm" onsubmit="sendEmail(); return false;">
 						
 							<!-- Name input -->
 							<div class="mb-3">
 								<label class="form-label" for="name">Name</label>
-								<input class="form-control" id="name" type="text" placeholder="Name" />
+								<input class="form-control" id="name" type="text" placeholder="Name" onchange="checkInput()"/>
 							</div>
 						
 							<!-- Email address input -->
 							<div class="mb-3">
 								<label class="form-label" for="emailAddress">Email Address</label>
-								<input class="form-control" id="emailAddress" type="email" placeholder="Email Address" />
+								<input class="form-control" id="emailAddress" type="email" placeholder="Email Address" onchange="checkInput()"/>
 							</div>
-						
+							
 							<!-- Message input -->
 							<div class="mb-3">
 								<label class="form-label" for="message">Message</label>
-								<textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+								<textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" oninput="checkInput()"></textarea>
 							</div>
-						
+							
 							<!-- Form submit button -->
 							<!-- <div class="d-flex align-items-center justify-content-left"> -->
 								<button class="btn" type="submit">Submit</button>
-							<!-- </div> -->
+								<!-- </div> -->
+
+							<div class="mt-3">
+								<div id="alertInformationArea"></div>
+							</div>
 						
 							</form>
 						
@@ -638,7 +642,34 @@
 	<!-- EMAIL FORM - SMTP JS -->
 	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script>
+		const successColor = "#55dd55";
+		const alertColor = "#eac317";
+		const errorColor = "#ea1717";
+
+		function setMessage(message, color) {
+			var alertInfoArea = document.getElementById("alertInformationArea");
+			alertInfoArea.innerHTML = message;
+			alertInfoArea.style.color = color;
+		}
+
+		function checkInputAllFilled() {
+			return document.getElementById("name").value != "" &&
+				document.getElementById("emailAddress").value != "" &&
+				document.getElementById("message").value != "";
+		}
+
+		function checkInput() {
+			if (checkInputAllFilled()) {
+				setMessage("", alertColor);
+			}
+		}
+
 		function sendEmail() {
+			if (!checkInputAllFilled()) {
+				setMessage("Please fill in all fields!", alertColor);
+				return;
+			}
+
 			Email.send({
 				SecureToken: "02e5b5c3-4b32-45e3-a163-7d2cda9bf155",
 				To : 'nihat.isik.ethz@gmail.com',
@@ -648,7 +679,13 @@
 					"Name: " + document.getElementById("name").value + 
 					"<br>Message: <br>" + document.getElementById("message").value
 			}).then(
-				message => alert(message)
+				(message) => {
+					if (message == "OK") {
+						setMessage("Message sent! Thank you for contacting me!", successColor);
+					} else {
+						setMessage("Error sending message. Please try again later.", errorColor);
+					}
+				}
 			);
 		}
 	</script>
