@@ -56,6 +56,17 @@
     font-size: 2.7rem;
 }
 
+.basic-title-text-adjust-size
+{
+	font-size: 2.5rem;
+}
+.basic-title-text {
+	font-family: var(--roboto);
+	font-weight: 300;
+	color: var(--primary-color);
+	letter-spacing: 5px;
+}
+
 .sub-title-text {
     font-family: var(--roboto);
     font-weight: 800;
@@ -102,6 +113,10 @@
     {
         font-size: 2rem;
     }
+	.basic-title-text-adjust-size
+	{
+		font-size: 2.5rem;
+	}
 }
 
 @media screen and  (max-width: 992px) {
@@ -113,6 +128,10 @@
     {
         font-size: 2.5rem;
     }
+	.basic-title-text-adjust-size
+	{
+		font-size: 2.3rem;
+	}
 }
 
 @media screen and  (max-width: 768px) {
@@ -124,6 +143,10 @@
     {
         font-size: 2.3rem;
     }
+	.basic-title-text-adjust-size
+	{
+		font-size: 2.1rem;
+	}
 }
 
 @media screen and  (max-width: 576px) {
@@ -135,6 +158,10 @@
     {
         font-size: 2rem;
     }
+	.basic-title-text-adjust-size
+	{
+		font-size: 2rem;
+	}
 }
 
 /* ================== */

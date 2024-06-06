@@ -725,47 +725,48 @@ video {
     background-color: var(--secondary-color);
     border-radius: 5px;
     color: var(--background-color);
-    height: 100px;
+    height: auto;
     border: 2px solid var(--primary-color);
     border-bottom: 15px solid var(--primary-color);
     /* box-shadow: var(--primary-color) 0px 15px px; */
 }
 
 .thanks-area .thanks-email-font {
-    font: normal 600 30px/25px var(--roboto);
-    font-size: 30px;
+    font: normal 400 30px/25px var(--roboto);
+    font-size: 18px;
 }
 
 .thanks-area .thanks-email-card i {
-    font-size: 50px;
+	font-size: 50px;
     padding: 0.5rem;
     transform: skewX(-5deg);
     transform: rotate(5deg);
 }
-
-@media screen and  (max-width: 768px) {
-    .thanks-area .thanks-email-font {
-        background-color: var(--secondary-color);
-        font: normal 600 24px/25px var(--roboto);
-        font-size: 24px;
-    }    
+.thanks-area .thanks-email-card button {
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	border-radius: 5px;
+	border: 1px solid var(--primary-color);
+	border-bottom: 3px solid var(--primary-color);
+}
+.thanks-area .thanks-email-card button:hover {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-radius: 5px;
+	border-bottom: 7px solid var(--primary-color);
 }
 
-@media screen and  (max-width: 576px) {
-    .thanks-area .thanks-email-font {
-        background-color: var(--secondary-color);
-        font: normal 600 16px/25px var(--roboto);
-        font-size: 16px;
-    }    
-
-    .thanks-area .thanks-email-card i {
-        font-size: 30px;
-        padding: 0.5rem;
-        transform: skewX(-5deg);
-        transform: rotate(5deg);
-    }
+.thanks-area input, .thanks-area textarea {
+    background-color: var(--primary-color);
+	border-radius: 5px;
+	border: 2px solid var(--primary-color);
 }
-
+.thanks-area input:focus, .thanks-area textarea:focus {
+	border-radius: 5px;
+	border: 2px solid var(--primary-color);
+	background-color: var(--primary-color);
+    outline: 2px solid var(--background-color);
+}
 
 
 /* ------------- */
